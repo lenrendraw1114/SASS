@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
@@ -382,6 +383,75 @@ th {
   text-align: left;
 }
 
+/* ============================================ */
+/**
+追加項目
+*/
+.link-button {
+  display: flex;
+  margin-top: 24px;
+  justify-content: end;
+}
+.link-button p {
+  font-size: 14px;
+  padding: 5.6px 26.63px;
+  border: solid 2px;
+  border-radius: 6px;
+}
+
+.range {
+  max-width: 800px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contents-top {
+  margin-top: 5px;
+  max-width: 342px;
+  color: #468459; /* 線の色 */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.contents__title {
+  color: #468459; /* 線の色 */
+  display: flex;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  align-items: center;
+}
+.contents__title p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.deco {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.deco_left {
+  transform: rotate(45deg); /* 45度回転 */
+}
+.deco_left .line:nth-child(2) {
+  margin-left: 5px; /* 二本目の線を右に5px移動 */
+}
+.deco_right {
+  transform: rotate(-45deg); /* 45度回転 */
+}
+.deco_right .line:nth-child(2) {
+  margin-left: -5px; /* 二本目の線を右に5px移動 */
+}
+.deco .line {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 13px; /* 線の長さ */
+  height: 2.44px; /* 線の太さ */
+  background-color: #468459; /* 線の色 */
+}
+
 @media screen and (max-width: 768px) {
   [data-only-show=pc] {
     display: none !important;
@@ -423,14 +493,382 @@ svg {
   height: auto;
 }
 
-.header {
-  color: yellow;
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+header {
+  background: none;
+  display: flex;
+  padding: 6.4px 32px;
+  justify-content: space-between;
+}
+header .header-symbol {
+  max-width: 240px;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+}
+header .header-index {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
+  font-size: 14px;
+  color: #ffffff;
+}
+header .header-index__section-list {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+header .header-index__contact {
+  background-color: #0C4324;
+  padding: 13px 16px;
+  border-radius: 4px;
 }
 
-.header {
-  color: yellow;
+/* ーーーー */
+/* hero */
+/* ファーストビュー */
+/* ーーーー */
+.hero {
+  margin-top: -64px;
+  background-image: url("/img/TOP-Carouselgroup1.png");
+  background-size: cover; /* 画像をコンテナにぴったり合わせる */
+  background-position: center center; /* 画像を中央に配置 */
+  width: 100%; /* 横幅は100% */
+}
+.hero-title {
+  padding: 118px 0 73px 81px;
+  writing-mode: vertical-rl; /* 縦書きにする */
+  font-family: "Shippori Mincho", serif;
+  font-size: 28px;
+  font-weight: 600; /* セミボールド */
+  color: #468459;
+  letter-spacing: 1.5vw;
 }
 
-.header {
-  color: yellow;
+/* ーーーー */
+/* news */
+/* お知らせ */
+/* ーーーー */
+.news__inner {
+  display: flex;
+  margin: 14px 100px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.news-contents {
+  display: flex;
+  align-items: center;
+  max-width: 1084px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+.news-contents__title {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  color: #468459;
+  align-items: end;
+}
+.news-contents__title-en {
+  font-size: 24px;
+  font-weight: bold;
+}
+.news-contents__title-jp {
+  font-size: 18px;
+}
+.news-contents__area {
+  display: flex;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+}
+.news-contents__date {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.news-contents__date-calendar {
+  font-size: 16px;
+}
+.news-contents__date-jp {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #468459;
+  padding: 2px 16px 4px;
+  border-radius: 4px;
+}
+
+/* ーーーー */
+/* concept */
+/* 特徴 */
+/* ーーーー */
+.section-title {
+  position: absolute;
+  font-size: 134px;
+  font-family: "Merriweather Sans", sans-serif;
+  color: #F0F5E1;
+  z-index: -1;
+  top: 50px;
+  left: -140px;
+}
+
+.concept__inner {
+  position: relative;
+  z-index: 1;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+.concept-contents {
+  max-width: 320px;
+}
+.concept-contents__title {
+  color: #468459;
+}
+.concept-contents__title-en {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+.concept-contents__title-en img {
+  max-width: 22px;
+  max-height: 20px;
+  aspect-ratio: 1/1;
+}
+.concept-contents__title-en p {
+  font-size: 24px;
+}
+.concept-contents__title-jp {
+  font-size: 24px;
+}
+.concept-contents__top {
+  margin-top: 20px;
+  color: #468459;
+  font-weight: bold;
+  font-size: 32px;
+}
+.concept-image img {
+  width: 110%;
+}
+.concept-image__back {
+  position: absolute;
+  z-index: -1;
+  top: 1240px;
+  left: 970px;
+}
+.concept-image__back img {
+  max-width: 440px;
+}
+
+/* ーーーー */
+/* Course */
+/* コース・料金 */
+/* ーーーー */
+.course {
+  background-color: #F0F5E1;
+}
+.course__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 111px;
+  padding-bottom: 167px;
+}
+.course-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-contents__area {
+  margin-top: 64px;
+  display: flex;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+.course-contents__box {
+  display: flex;
+  flex-direction: column;
+}
+.course-contents__box-title {
+  margin-top: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #0C4324;
+}
+.course-contents__box-text {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  font-size: 18px;
+}
+.course-contents__more {
+  margin-top: 32px;
+}
+.course-image img {
+  width: 110%;
+}
+.course-image__back {
+  position: absolute;
+  z-index: 2;
+  top: 2340px;
+  left: 970px;
+}
+.course-image__back img {
+  max-width: 440px;
+}
+
+.section-title_course {
+  filter: brightness(95%); /* 95%に設定して色を明るくする */
+}
+
+/* ーーーー */
+/* Review */
+/* お客様の声 */
+/* ーーーー */
+.review__inner {
+  margin-bottom: 39px;
+}
+.review__back {
+  z-index: -2; /* タイトルを前面に表示 */
+}
+.review-contents {
+  position: relative; /* 楕円を配置するために相対位置 */
+  z-index: 1;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-contents__title {
+  /* 背景の楕円 */
+}
+.review-contents__title::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 488px;
+  left: 420px;
+  top: -80px;
+  background-color: #ffffff;
+  border-radius: 50%; /* 楕円形にする */
+  z-index: -1; /* タイトルの後ろに配置 */
+}
+.review-contents__area {
+  margin-top: 60px;
+  display: flex;
+  -moz-column-gap: 55px;
+       column-gap: 55px;
+}
+.review-contents__box {
+  max-width: 256px;
+}
+.review-contents__image {
+  border-radius: 50%; /* 丸く切り抜く */
+  overflow: hidden; /* はみ出た部分を非表示 */
+}
+.review-contents__user-name {
+  margin-top: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0C4324;
+  text-align: center;
+}
+.review-contents__text {
+  font-size: 18px;
+  margin-top: 24px;
+}
+.review-contents__more {
+  margin-top: 48px;
+}
+
+/* ーーーー */
+/* footer */
+/* フッター */
+/* ーーーー */
+footer {
+  background-color: #F0F5E1;
+}
+footer .footer__inner {
+  padding-top: 160px;
+  max-width: 1026px;
+  margin: 0 auto;
+}
+footer .footer-contents__area {
+  margin-top: 40px;
+  display: flex;
+  -moz-column-gap: 58px;
+       column-gap: 58px;
+}
+footer .footer-contents__title {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+footer .footer-contents__box {
+  max-width: 459px;
+}
+footer .footer-contents__top {
+  max-width: unset;
+  text-align: left;
+}
+footer .footer-contents__post {
+  margin-top: 16px;
+}
+footer .footer-contents__phone {
+  text-align: left;
+  margin-top: 16px;
+}
+footer .footer-contents__phone span {
+  font-size: 18px;
+}
+footer .footer-contents__image {
+  margin-top: 16px;
+}
+footer .footer-contents__contact {
+  display: block;
+  max-width: 300px;
+  margin-top: 32px;
+  background-color: #1B9240;
+  padding: 14px 22px;
+  border-radius: 4px;
+}
+footer .footer-contents__contact p {
+  color: #ffffff;
+  text-align: center;
+}
+footer .footer-index {
+  display: flex;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}
+footer .footer-index__area {
+  margin-top: 60px;
+  display: flex;
+  -moz-column-gap: 47px;
+       column-gap: 47px;
+  padding: 40px 0 87px;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-index__section-list {
+  display: flex;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}
+footer .footer__copylight {
+  display: flex;
+  justify-content: center;
+  padding: 11.5px 0;
+  background-color: #468459;
+}
+footer .footer__copylight p {
+  color: #ffffff;
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

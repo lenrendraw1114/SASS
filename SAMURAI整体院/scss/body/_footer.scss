@@ -1,5 +1,108 @@
 @charset "utf-8";
+@use "../common/variables" as variables;
 
-.header {
-  color: yellow;
+/* ーーーー */
+/* footer */
+/* フッター */
+/* ーーーー */
+
+footer{
+  background-color:  variables.$color-base-LightGreen;
+
+  .footer{
+    &__inner{
+      padding-top: 160px;
+      max-width: 1026px;
+      margin: 0 auto;
+    }
+  
+    &-contents{
+
+      &__area{
+        margin-top: 40px;
+        display: flex;
+        column-gap: 58px;
+      }
+
+
+      &__title{
+        width: max-content;
+        margin: 0 auto;
+      }
+
+      &__box{
+        max-width: 459px;
+      }
+
+      &__top{
+        max-width: unset;
+        text-align: left;
+      }
+
+      &__post{
+        margin-top: 16px;
+      }
+
+      &__phone{
+        text-align: left;
+        margin-top: 16px;
+        span{
+          font-size: 18px;
+        }
+      }
+
+      &__image{
+        margin-top: 16px;
+      }
+
+      &__contact{
+        display: block;
+        max-width: 300px;
+        margin-top: 32px;
+        background-color:  variables.$color-base-Green;
+        padding: 14px 22px;
+        border-radius: 4px;
+
+        p{
+          color:  variables.$color-base-white;
+          text-align: center;
+        }
+      }
+    }
+
+    &-index{
+      display: flex;
+      column-gap: 26px;
+
+      &__area{
+        margin-top: 60px;
+        display: flex;
+        column-gap: 47px;
+        padding: 40px 0 87px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__section{
+
+        
+        &-list{
+          display: flex;
+          column-gap: 26px;
+        }
+      }
+    }
+
+    &__copylight{
+      display: flex;
+      justify-content: center;
+      padding: 11.5px 0;
+      background-color:  variables.$color-base-MossGreen;
+
+      p{
+        color:  variables.$color-base-white;
+        font-size: 12px;
+      }
+    }
+  }
 }

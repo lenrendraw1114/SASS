@@ -26,6 +26,12 @@ $color-base-gray: #eaeaea;
 $color-yellow-marker: #e9f651;
 $color-base-red: #e74c3c;
 
+$color-base-LightGreen: #F0F5E1;
+$color-base-GrassGreen: #96C519;
+$color-base-Green: #1B9240;
+$color-base-MossGreen: #468459;
+$color-base-DarkGreen: #0C4324;
+
 // shadow
 $shadow-base: 0 0 10px rgb(0 0 0 / 10%);
 $shadow-top: 0 40px 60px rgb(18 113 142 / 24%);
@@ -37,6 +43,9 @@ $hiragino-ud-sans-w4: "Hiragino UD Sans W4 JIS2004", "sans-serif";
 $hiragino-ud-sans-w5: "Hiragino UD Sans W5 JIS2004", "sans-serif";
 $noto-sans: "Noto Sans JP", sans-serif;
 $font-family-termina: "termina", sans-serif;
+// add fonts
+$merriweather-sans: "Merriweather Sans", sans-serif;
+$shippori-mincho: "Shippori Mincho", serif;
 
 // animations
 $duration-short: 0.3s;

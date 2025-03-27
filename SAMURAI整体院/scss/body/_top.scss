@@ -1,0 +1,307 @@
+@charset "utf-8";
+@use "../common/variables" as variables;
+
+/* ーーーー */
+/* hero */
+/* ファーストビュー */
+/* ーーーー */
+
+.hero {
+  margin-top: -64px;
+  background-image: url('/img/TOP-Carouselgroup1.png');
+  background-size: cover; /* 画像をコンテナにぴったり合わせる */
+  background-position: center center; /* 画像を中央に配置 */
+  width: 100%; /* 横幅は100% */
+
+  &-title {
+    padding: 118px 0 73px 81px;
+    writing-mode: vertical-rl; /* 縦書きにする */
+    font-family: variables.$shippori-mincho;
+    font-size: 28px;
+    font-weight: 600; /* セミボールド */
+    color: variables.$color-base-MossGreen;  // 名前空間を付ける
+    letter-spacing: 1.5vw;
+  }
+}
+
+
+/* ーーーー */
+/* news */
+/* お知らせ */
+/* ーーーー */
+
+.news{
+  &__inner{
+    display: flex;
+    margin: 14px 100px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-contents{
+    display: flex;
+    align-items: center;
+    max-width: 1084px;
+    column-gap: 45px;
+
+    &__title{
+      display: flex;
+      column-gap: 10px;
+      color: variables.$color-base-MossGreen;  // 名前空間を付ける
+      align-items:end;
+      &-en{
+        font-size: 24px;
+        font-weight: bold;
+      }
+      &-jp{
+        font-size: 18px;
+      }
+    }
+
+    &__area{
+      display: flex;
+      column-gap: 28px;
+    }
+
+    &__date{
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      &-calendar{
+        font-size: 16px;
+      }
+      &-jp{
+        font-size: 14px;
+        color: variables.$color-base-white;
+        background-color: variables.$color-base-MossGreen;  // 名前空間を付ける
+        padding: 2px 16px 4px;
+        border-radius: 4px;
+      }
+    }
+
+  }
+}
+
+/* ーーーー */
+/* concept */
+/* 特徴 */
+/* ーーーー */
+
+
+.section-title{
+position: absolute;
+font-size: 134px;
+font-family: variables.$merriweather-sans;
+color: variables.$color-base-LightGreen;
+z-index: -1;
+top: 50px;
+left: -140px;
+}
+
+
+.concept{
+  &__inner{
+    position: relative;
+    z-index: 1;
+    column-gap: 80px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+  }
+
+  &-contents{
+    max-width: 320px;
+    &__title{
+      color: variables.$color-base-MossGreen;
+      &-en{
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        img{
+          max-width: 22px;
+          max-height: 20px;
+          aspect-ratio: 1/1;
+        }
+        p{
+          font-size: 24px;
+        }
+      }
+      &-jp{
+        font-size: 24px;
+      }
+    }
+
+    &__top{
+      margin-top: 20px;
+      color: variables.$color-base-MossGreen;
+      font-weight: bold;
+      font-size: 32px;
+    }
+    
+  }
+
+  &-image{
+    img{
+      width: 110%;
+    }
+    &__back
+    {
+      position: absolute;
+      z-index: -1;
+      top: 1240px;
+      left: 970px;
+      img{
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+/* ーーーー */
+/* Course */
+/* コース・料金 */
+/* ーーーー */
+
+.course{
+  background-color:  variables.$color-base-LightGreen;
+  &__inner{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 111px;
+    padding-bottom: 167px;
+  }
+
+  &-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__area{
+      margin-top: 64px;
+      display: flex;
+      column-gap: 80px;
+    }
+
+    &__box{
+      display: flex;
+      flex-direction: column;
+
+      &-title{
+        margin-top: 32px;
+        font-weight: bold;
+        font-size: 24px;
+        color: variables.$color-base-DarkGreen;
+      }
+
+      &-text{
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 13px;
+        font-size: 18px;
+      }
+    }
+
+    &__more{
+      margin-top: 32px;
+    }
+  }
+
+  &-image{
+    img{
+      width: 110%;
+    }
+    &__back
+    {
+      position: absolute;
+      z-index: 2;
+      top: 2340px;
+      left: 970px;
+      img{
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+.section-title_course{
+  filter: brightness(95%); /* 95%に設定して色を明るくする */
+  }
+
+
+/* ーーーー */
+/* Review */
+/* お客様の声 */
+/* ーーーー */
+
+.review{
+
+  &__inner{
+    margin-bottom: 39px;
+  }
+
+  &__back{
+    z-index: -2; /* タイトルを前面に表示 */
+  }
+
+
+  &-contents{
+    position: relative; /* 楕円を配置するために相対位置 */
+    z-index: 1;
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+    
+      /* 背景の楕円 */
+      &::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 488px;
+        left: 420px;
+        top: -80px;
+        background-color: variables.$color-base-white;
+        border-radius: 50%; /* 楕円形にする */
+        z-index: -1; /* タイトルの後ろに配置 */
+      }
+    }
+    
+
+    &__area{
+      margin-top: 60px;
+      display: flex;
+      column-gap: 55px;
+    }
+
+    &__box{
+      max-width: 256px;
+    }
+
+    &__image{
+      border-radius: 50%;        /* 丸く切り抜く */
+      overflow: hidden;          /* はみ出た部分を非表示 */
+    }
+
+    &__user-name{
+      margin-top: 32px;
+      font-size: 24px;
+      font-weight: bold;
+      color: variables.$color-base-DarkGreen;
+      text-align: center;
+    }
+
+    &__text{
+      font-size: 18px;
+      margin-top: 24px;
+    }
+
+    &__more{
+      margin-top: 48px;
+    }
+  }
+}
+

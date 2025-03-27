@@ -1,5 +1,43 @@
 @charset "utf-8";
+@use "../common/variables" as variables;
 
-.header {
-  color: yellow;
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  background: none;
+  display: flex;
+  padding: 6.4px 32px;
+  justify-content: space-between;
+
+  .header-symbol {
+    max-width: 240px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-index {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+    font-size: 14px;
+    color: variables.$color-base-white;
+    
+    &__section {
+
+      &-list {
+        display: flex;
+        column-gap: 40px;
+      }
+    }
+
+    &__contact{
+      background-color: variables.$color-base-DarkGreen;  // 名前空間を付ける
+      padding: 13px 16px;
+      border-radius: 4px;
+    }
+  }
 }

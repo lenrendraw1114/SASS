@@ -3,6 +3,7 @@
 /* Reset box-model and set borders */
 
 /* ============================================ */
+@use "../common/variables" as variables;
 
 *,
 ::before,
@@ -426,4 +427,82 @@ th {
 th {
 	font-weight: bold;
 	text-align: left;
+}
+
+
+/* ============================================ */
+
+/**
+追加項目
+*/
+
+.link-button{
+	display: flex;
+	margin-top: 24px;
+	justify-content: end;
+	p{
+		font-size: 14px;
+		padding: 5.6px 26.63px;
+		border: solid 2px;
+		border-radius: 6px;
+	}
+}
+
+.range{
+	max-width: 800px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.contents{
+	&-top{
+		margin-top: 5px;
+		max-width: 342px;
+		color: variables.$color-base-MossGreen; /* 線の色 */
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	&__title{
+		color: variables.$color-base-MossGreen; /* 線の色 */
+		display: flex;
+		column-gap: 18px;
+		align-items: center;
+	
+		p{
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+}
+
+.deco{
+	display: flex;
+	flex-direction:column;
+	row-gap: 5px;
+
+	&_left{
+		transform: rotate(45deg); /* 45度回転 */
+		.line:nth-child(2) {
+			margin-left: 5px; /* 二本目の線を右に5px移動 */
+		}
+	}
+
+	&_right{
+		transform: rotate(-45deg); /* 45度回転 */
+		.line:nth-child(2) {
+			margin-left: -5px; /* 二本目の線を右に5px移動 */
+		}
+	}
+
+	.line{
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		width: 13px; /* 線の長さ */
+		height: 2.44px; /* 線の太さ */
+		background-color: variables.$color-base-MossGreen; /* 線の色 */
+	}
 }
