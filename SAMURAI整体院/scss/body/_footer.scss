@@ -1,107 +1,99 @@
 @charset "utf-8";
 @use "../common/variables" as variables;
+@use "../common/functions" as functions;
 
-/* ーーーー */
-/* footer */
-/* フッター */
-/* ーーーー */
+footer {
+  background-color: variables.$color-base-LightGreen;
 
-footer{
-  background-color:  variables.$color-base-LightGreen;
-
-  .footer{
-    &__inner{
-      padding-top: 160px;
-      max-width: 1026px;
+  .footer {
+    &__inner {
+      padding-top: functions.vw(160);
+      max-width: functions.vw(1026);
       margin: 0 auto;
     }
-  
-    &-contents{
 
-      &__area{
-        margin-top: 40px;
+    &-contents {
+      &__area {
+        margin-top: functions.vw(40);
         display: flex;
-        column-gap: 58px;
+        column-gap: functions.vw(58);
       }
 
-
-      &__title{
+      &__title {
         width: max-content;
         margin: 0 auto;
       }
 
-      &__box{
-        max-width: 459px;
+      &__box {
+        max-width: functions.vw(459);
       }
 
-      &__top{
+      &__top {
         max-width: unset;
         text-align: left;
       }
 
-      &__post{
-        margin-top: 16px;
+      &__post {
+        margin-top: functions.vw(16);
       }
 
-      &__phone{
+      &__phone {
         text-align: left;
-        margin-top: 16px;
-        span{
-          font-size: 18px;
+        margin-top: functions.vw(16);
+        span {
+          font-size: functions.vw(18);
         }
       }
 
-      &__image{
-        margin-top: 16px;
+      &__image {
+        margin-top: functions.vw(16);
       }
 
-      &__contact{
+      &__contact {
         display: block;
-        max-width: 300px;
-        margin-top: 32px;
-        background-color:  variables.$color-base-Green;
-        padding: 14px 22px;
-        border-radius: 4px;
+        max-width: functions.vw(300);
+        margin-top: functions.vw(32);
+        background-color: variables.$color-base-Green;
+        padding: functions.vw(14) functions.vw(22);
+        border-radius: functions.vw(4);
 
-        p{
-          color:  variables.$color-base-white;
+        p {
+          color: variables.$color-base-white;
           text-align: center;
         }
       }
     }
 
-    &-index{
+    &-index {
       display: flex;
-      column-gap: 26px;
+      column-gap: functions.vw(26);
 
-      &__area{
-        margin-top: 60px;
+      &__area {
+        margin-top: functions.vw(60);
         display: flex;
-        column-gap: 47px;
-        padding: 40px 0 87px;
+        column-gap: functions.vw(47);
+        padding: functions.vw(40) 0 functions.vw(87);
         align-items: center;
         justify-content: center;
       }
 
-      &__section{
-
-        
-        &-list{
+      &__section {
+        &-list {
           display: flex;
-          column-gap: 26px;
+          column-gap: functions.vw(26);
         }
       }
     }
 
-    &__copylight{
+    &__copylight {
       display: flex;
       justify-content: center;
-      padding: 11.5px 0;
-      background-color:  variables.$color-base-MossGreen;
+      padding: functions.vw(11.5) 0;
+      background-color: variables.$color-base-MossGreen;
 
-      p{
-        color:  variables.$color-base-white;
-        font-size: 12px;
+      p {
+        color: variables.$color-base-white;
+        font-size: functions.vw(12);
       }
     }
   }

@@ -1,5 +1,6 @@
 @charset "utf-8";
 @use "../common/variables" as variables;
+@use "../common/functions" as functions;
 
 /* ーーーー */
 /* hero */
@@ -7,23 +8,22 @@
 /* ーーーー */
 
 .hero {
-  margin-top: -64px;
+  margin-top: -functions.vw(64);
   background-image: url('/img/TOP-Carouselgroup1.png');
-  background-size: cover; /* 画像をコンテナにぴったり合わせる */
-  background-position: center center; /* 画像を中央に配置 */
-  width: 100%; /* 横幅は100% */
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
 
   &-title {
-    padding: 118px 0 73px 81px;
-    writing-mode: vertical-rl; /* 縦書きにする */
+    padding: functions.vw(118) 0 functions.vw(73) functions.vw(81);
+    writing-mode: vertical-rl;
     font-family: variables.$shippori-mincho;
-    font-size: 28px;
-    font-weight: 600; /* セミボールド */
-    color: variables.$color-base-MossGreen;  // 名前空間を付ける
-    letter-spacing: 1.5vw;
+    font-size: functions.vw(28);
+    font-weight: 600;
+    color: variables.$color-base-MossGreen;
+    letter-spacing: functions.vw(1.5);
   }
 }
-
 
 /* ーーーー */
 /* news */
@@ -33,7 +33,7 @@
 .news{
   &__inner{
     display: flex;
-    margin: 14px 100px 0;
+    margin: functions.vw(14) functions.vw(100) 0;
     align-items: center;
     justify-content: space-between;
   }
@@ -41,44 +41,43 @@
   &-contents{
     display: flex;
     align-items: center;
-    max-width: 1084px;
-    column-gap: 45px;
+    max-width: functions.vw(1084);
+    column-gap: functions.vw(45);
 
     &__title{
       display: flex;
-      column-gap: 10px;
-      color: variables.$color-base-MossGreen;  // 名前空間を付ける
+      column-gap: functions.vw(10);
+      color: variables.$color-base-MossGreen;
       align-items:end;
       &-en{
-        font-size: 24px;
+        font-size: functions.vw(24);
         font-weight: bold;
       }
       &-jp{
-        font-size: 18px;
+        font-size: functions.vw(18);
       }
     }
 
     &__area{
       display: flex;
-      column-gap: 28px;
+      column-gap: functions.vw(28);
     }
 
     &__date{
       display: flex;
       align-items: center;
-      column-gap: 10px;
+      column-gap: functions.vw(10);
       &-calendar{
-        font-size: 16px;
+        font-size: functions.vw(16);
       }
       &-jp{
-        font-size: 14px;
+        font-size: functions.vw(14);
         color: variables.$color-base-white;
-        background-color: variables.$color-base-MossGreen;  // 名前空間を付ける
-        padding: 2px 16px 4px;
-        border-radius: 4px;
+        background-color: variables.$color-base-MossGreen;
+        padding: functions.vw(2) functions.vw(16) functions.vw(4);
+        border-radius: functions.vw(4);
       }
     }
-
   }
 }
 
@@ -87,29 +86,27 @@
 /* 特徴 */
 /* ーーーー */
 
-
 .section-title{
-position: absolute;
-font-size: 134px;
-font-family: variables.$merriweather-sans;
-color: variables.$color-base-LightGreen;
-z-index: -1;
-top: 50px;
-left: -140px;
+  position: absolute;
+  font-size: functions.vw(134);
+  font-family: variables.$merriweather-sans;
+  color: variables.$color-base-LightGreen;
+  z-index: -1;
+  top: functions.vw(50);
+  left: -functions.vw(140);
 }
-
 
 .concept{
   &__inner{
     position: relative;
     z-index: 1;
-    column-gap: 80px;
-    margin-top: 120px;
-    margin-bottom: 150px;
+    column-gap: functions.vw(80);
+    margin-top: functions.vw(120);
+    margin-bottom: functions.vw(150);
   }
 
   &-contents{
-    max-width: 320px;
+    max-width: functions.vw(320);
     &__title{
       color: variables.$color-base-MossGreen;
       &-en{
@@ -117,40 +114,38 @@ left: -140px;
         font-weight: bold;
         align-items: center;
         img{
-          max-width: 22px;
-          max-height: 20px;
+          max-width: functions.vw(22);
+          max-height: functions.vw(20);
           aspect-ratio: 1/1;
         }
         p{
-          font-size: 24px;
+          font-size: functions.vw(24);
         }
       }
       &-jp{
-        font-size: 24px;
+        font-size: functions.vw(24);
       }
     }
 
     &__top{
-      margin-top: 20px;
+      margin-top: functions.vw(20);
       color: variables.$color-base-MossGreen;
       font-weight: bold;
-      font-size: 32px;
+      font-size: functions.vw(32);
     }
-    
   }
 
   &-image{
     img{
       width: 110%;
     }
-    &__back
-    {
+    &__back{
       position: absolute;
       z-index: -1;
-      top: 1240px;
-      left: 970px;
+      top: functions.vw(1240);
+      left: functions.vw(970);
       img{
-        max-width: 440px;
+        max-width: functions.vw(440);
       }
     }
   }
@@ -162,14 +157,14 @@ left: -140px;
 /* ーーーー */
 
 .course{
-  background-color:  variables.$color-base-LightGreen;
+  background-color: variables.$color-base-LightGreen;
   &__inner{
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: center;
-    padding-top: 111px;
-    padding-bottom: 167px;
+    padding-top: functions.vw(111);
+    padding-bottom: functions.vw(167);
   }
 
   &-contents{
@@ -178,9 +173,9 @@ left: -140px;
     align-items: center;
 
     &__area{
-      margin-top: 64px;
+      margin-top: functions.vw(64);
       display: flex;
-      column-gap: 80px;
+      column-gap: functions.vw(80);
     }
 
     &__box{
@@ -188,23 +183,23 @@ left: -140px;
       flex-direction: column;
 
       &-title{
-        margin-top: 32px;
+        margin-top: functions.vw(32);
         font-weight: bold;
-        font-size: 24px;
+        font-size: functions.vw(24);
         color: variables.$color-base-DarkGreen;
       }
 
       &-text{
-        margin-top: 24px;
+        margin-top: functions.vw(24);
         display: flex;
         flex-direction: column;
-        row-gap: 13px;
-        font-size: 18px;
+        row-gap: functions.vw(13);
+        font-size: functions.vw(18);
       }
     }
 
     &__more{
-      margin-top: 32px;
+      margin-top: functions.vw(32);
     }
   }
 
@@ -212,23 +207,21 @@ left: -140px;
     img{
       width: 110%;
     }
-    &__back
-    {
+    &__back{
       position: absolute;
       z-index: 2;
-      top: 2340px;
-      left: 970px;
+      top: functions.vw(2340);
+      left: functions.vw(970);
       img{
-        max-width: 440px;
+        max-width: functions.vw(440);
       }
     }
   }
 }
 
 .section-title_course{
-  filter: brightness(95%); /* 95%に設定して色を明るくする */
-  }
-
+  filter: brightness(95%);
+}
 
 /* ーーーー */
 /* Review */
@@ -238,70 +231,66 @@ left: -140px;
 .review{
 
   &__inner{
-    margin-bottom: 39px;
+    margin-bottom: functions.vw(39);
   }
 
   &__back{
-    z-index: -2; /* タイトルを前面に表示 */
+    z-index: -2;
   }
 
-
   &-contents{
-    position: relative; /* 楕円を配置するために相対位置 */
+    position: relative;
     z-index: 1;
-    margin-top: -60px;
+    margin-top: -functions.vw(60);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__title {
     
-      /* 背景の楕円 */
       &::before {
         content: "";
         position: absolute;
-        width: 600px;
-        height: 488px;
-        left: 420px;
-        top: -80px;
+        width: functions.vw(600);
+        height: functions.vw(488);
+        left: functions.vw(420);
+        top: -functions.vw(80);
         background-color: variables.$color-base-white;
-        border-radius: 50%; /* 楕円形にする */
-        z-index: -1; /* タイトルの後ろに配置 */
+        border-radius: 50%;
+        z-index: -1;
       }
     }
-    
 
     &__area{
-      margin-top: 60px;
+      margin-top: functions.vw(60);
       display: flex;
-      column-gap: 55px;
+      column-gap: functions.vw(55);
     }
 
     &__box{
-      max-width: 256px;
+      max-width: functions.vw(256);
     }
 
     &__image{
-      border-radius: 50%;        /* 丸く切り抜く */
-      overflow: hidden;          /* はみ出た部分を非表示 */
+      border-radius: 50%;
+      overflow: hidden;
     }
 
     &__user-name{
-      margin-top: 32px;
-      font-size: 24px;
+      margin-top: functions.vw(32);
+      font-size: functions.vw(24);
       font-weight: bold;
       color: variables.$color-base-DarkGreen;
       text-align: center;
     }
 
     &__text{
-      font-size: 18px;
-      margin-top: 24px;
+      font-size: functions.vw(18);
+      margin-top: functions.vw(24);
     }
 
     &__more{
-      margin-top: 48px;
+      margin-top: functions.vw(48);
     }
   }
 }
-

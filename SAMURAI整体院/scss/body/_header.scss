@@ -1,20 +1,16 @@
 @charset "utf-8";
 @use "../common/variables" as variables;
-
-/* ーーーー */
-/* header */
-/* ヘッダー */
-/* ーーーー */
+@use "../common/functions" as functions;
 
 header {
   background: none;
   display: flex;
-  padding: 6.4px 32px;
+  padding: functions.vw(6.4) functions.vw(32);
   justify-content: space-between;
 
   .header-symbol {
-    max-width: 240px;
-    padding: 6px 15px;
+    max-width: functions.vw(240);
+    padding: functions.vw(6) functions.vw(15);
     display: flex;
     align-items: center;
   }
@@ -22,22 +18,21 @@ header {
   .header-index {
     display: flex;
     align-items: center;
-    column-gap: 36px;
-    font-size: 14px;
+    column-gap: functions.vw(36);
+    font-size: functions.vw(14);
     color: variables.$color-base-white;
-    
-    &__section {
 
+    &__section {
       &-list {
         display: flex;
-        column-gap: 40px;
+        column-gap: functions.vw(40);
       }
     }
 
-    &__contact{
-      background-color: variables.$color-base-DarkGreen;  // 名前空間を付ける
-      padding: 13px 16px;
-      border-radius: 4px;
+    &__contact {
+      background-color: variables.$color-base-DarkGreen;
+      padding: functions.vw(13) functions.vw(16);
+      border-radius: functions.vw(4);
     }
   }
 }
