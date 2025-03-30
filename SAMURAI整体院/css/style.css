@@ -418,7 +418,7 @@ th {
   color: #468459; /* 線の色 */
   display: flex;
   -moz-column-gap: 18px;
-       column-gap: 18px;
+  column-gap: 18px;
   align-items: center;
 }
 .contents__title p {
@@ -530,7 +530,7 @@ header .header-index__contact {
 /* ーーーー */
 .hero {
   margin-top: -64px;
-  background-image: url("/img/TOP-Carouselgroup1.png");
+  background-image: url("../img/TOP-Carouselgroup1.png");
   background-size: cover; /* 画像をコンテナにぴったり合わせる */
   background-position: center center; /* 画像を中央に配置 */
   width: 100%; /* 横幅は100% */
@@ -742,9 +742,7 @@ header .header-index__contact {
   flex-direction: column;
   align-items: center;
 }
-.review-contents__title {
-  /* 背景の楕円 */
-}
+
 .review-contents__title::before {
   content: "";
   position: absolute;
